@@ -1,0 +1,40 @@
+{
+  "status": true,
+  "message": "Merge history retrieved successfully",
+  "data": [
+    {
+      "id": "xyz789",
+      "master_contact_id": "abc123",
+      "secondary_contact_id": "def456",
+      "merged_at": "2024-01-15T10:30:00.000000Z",
+      "merged_by": {
+        "id": "user123",
+        "name": "Admin User",
+        "email": "admin@example.com"
+      },
+      "merge_summary": {
+        "emails_added": 2,
+        "phones_added": 1,
+        "custom_fields_added": 3,
+        "custom_fields_updated": 1
+      }
+    },
+    {
+      "id": "xyz790",
+      "master_contact_id": "abc123",
+      "secondary_contact_id": "ghi789",
+      "merged_at": "2024-01-10T14:20:00.000000Z",
+      "merged_by": {
+        "id": "user456",
+        "name": "Manager User",
+        "email": "manager@example.com"
+      },
+      "merge_summary": {
+        "emails_added": 1,
+        "phones_added": 0,
+        "custom_fields_added": 2,
+        "custom_fields_updated": 0
+      }
+    }
+  ]
+}

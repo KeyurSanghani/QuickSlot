@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Aadhaar Card"
+    },
+    {
+        "name": "PAN Card"
+    },
+    {
+        "name": "Passport"
+    },
+    {
+        "name": "Voter ID"
+    },
+    {
+        "name": "Driving License"
+    },
+    {
+        "name": "Ration Card"
+    }
+]

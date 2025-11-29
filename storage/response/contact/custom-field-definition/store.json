@@ -1,0 +1,19 @@
+{
+  "status": true,
+  "message": "Custom field definition created successfully",
+  "data": {
+    "id": "encrypted_id",
+    "name": "preferred_contact_method",
+    "label": "Preferred Contact Method",
+    "field_type": "select",
+    "is_required": false,
+    "is_searchable": true,
+    "display_order": 1,
+    "status": 1,
+    "options": ["Email", "Phone", "SMS"],
+    "default_value": "Email",
+    "help_text": "Choose the preferred way to contact this person",
+    "created_at": "2025-01-01T00:00:00.000000Z",
+    "updated_at": "2025-01-01T00:00:00.000000Z"
+  }
+}

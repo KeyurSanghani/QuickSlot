@@ -1,0 +1,133 @@
+{
+  "status": true,
+  "message": "Merge preview retrieved successfully",
+  "data": {
+    "master": {
+      "id": "abc123xyz",
+      "first_name": "John",
+      "last_name": "Doe",
+      "company": "Acme Corp",
+      "job_title": "Manager",
+      "status": 1,
+      "emails": [
+        {
+          "id": "email1",
+          "email": "john.doe@acme.com",
+          "is_primary": true
+        }
+      ],
+      "phones": [
+        {
+          "id": "phone1",
+          "phone": "+1234567890",
+          "is_primary": true
+        }
+      ],
+      "custom_fields": [
+        {
+          "field_id": "field1",
+          "field_name": "department",
+          "value": "Sales"
+        }
+      ]
+    },
+    "secondary": {
+      "id": "xyz456abc",
+      "first_name": "John",
+      "last_name": "Doe",
+      "company": "Acme Corporation",
+      "job_title": "Senior Manager",
+      "status": 1,
+      "emails": [
+        {
+          "id": "email2",
+          "email": "j.doe@acme.com",
+          "is_primary": true
+        },
+        {
+          "id": "email3",
+          "email": "john.doe@acme.com",
+          "is_primary": false
+        }
+      ],
+      "phones": [
+        {
+          "id": "phone2",
+          "phone": "+0987654321",
+          "is_primary": true
+        }
+      ],
+      "custom_fields": [
+        {
+          "field_id": "field1",
+          "field_name": "department",
+          "value": "Marketing"
+        },
+        {
+          "field_id": "field2",
+          "field_name": "region",
+          "value": "North America"
+        }
+      ]
+    },
+    "differences": {
+      "standard_fields": {
+        "company": {
+          "master": "Acme Corp",
+          "secondary": "Acme Corporation"
+        },
+        "job_title": {
+          "master": "Manager",
+          "secondary": "Senior Manager"
+        }
+      },
+      "emails": {
+        "to_add": [
+          {
+            "id": "email2",
+            "email": "j.doe@acme.com",
+            "is_primary": false
+          }
+        ],
+        "duplicates": [
+          {
+            "id": "email3",
+            "email": "john.doe@acme.com"
+          }
+        ]
+      },
+      "phones": {
+        "to_add": [
+          {
+            "id": "phone2",
+            "phone": "+0987654321",
+            "is_primary": false
+          }
+        ],
+        "duplicates": []
+      },
+      "custom_fields": {
+        "conflicts": [
+          {
+            "field_id": "field1",
+            "field_name": "department",
+            "master_value": "Sales",
+            "secondary_value": "Marketing"
+          }
+        ],
+        "to_add": [
+          {
+            "field_id": "field2",
+            "field_name": "region",
+            "value": "North America"
+          }
+        ]
+      }
+    },
+    "merge_policies": {
+      "email_policy": ["merge_all", "primary_only"],
+      "phone_policy": ["merge_all", "primary_only"],
+      "custom_field_policy": ["keep_master_unless_empty", "keep_master_always", "append_both"]
+    }
+  }
+}

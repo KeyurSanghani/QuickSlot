@@ -1,0 +1,349 @@
+@import 'tailwindcss';
+
+@import 'tw-animate-css';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+    /* Base Colors */
+    --background: hsl(210 20% 98%);
+    --foreground: hsl(224 71.4% 4.1%);
+    --card: hsl(0 0% 100%);
+    --card-foreground: hsl(224 71.4% 4.1%);
+    --popover: hsl(0 0% 100%);
+    --popover-foreground: hsl(224 71.4% 4.1%);
+
+    /* Primary Theme - Professional Blue */
+    --primary: hsl(217 91% 60%);
+    --primary-foreground: hsl(0 0% 98%);
+    --primary-hover: hsl(217 91% 55%);
+    --primary-active: hsl(217 91% 50%);
+    --primary-light: hsl(217 91% 95%);
+    --primary-muted: hsl(217 91% 90%);
+
+    /* Secondary Theme - Success Green */
+    --secondary: hsl(142 76% 36%);
+    --secondary-foreground: hsl(0 0% 98%);
+    --secondary-hover: hsl(142 76% 31%);
+    --secondary-active: hsl(142 76% 26%);
+    --secondary-light: hsl(142 76% 95%);
+    --secondary-muted: hsl(142 76% 90%);
+
+    /* Accent - Soft Blue */
+    --accent: hsl(210 40% 96%);
+    --accent-foreground: hsl(217 91% 60%);
+    --accent-hover: hsl(210 40% 92%);
+
+    /* Neutral Colors */
+    --muted: hsl(210 40% 96%);
+    --muted-foreground: hsl(215.4 16.3% 46.9%);
+    --destructive: hsl(0 84.2% 60.2%);
+    --destructive-foreground: hsl(0 0% 98%);
+    --warning: hsl(38 92% 50%);
+    --warning-foreground: hsl(0 0% 98%);
+    --info: hsl(199 89% 48%);
+    --info-foreground: hsl(0 0% 98%);
+
+    /* Borders and Inputs */
+    --border: hsl(214.3 31.8% 91.4%);
+    --input: hsl(214.3 31.8% 91.4%);
+    --ring: hsl(217 91% 60%);
+
+    /* Charts - Blue/Green Palette */
+    --chart-1: hsl(217 91% 60%);
+    --chart-2: hsl(142 76% 36%);
+    --chart-3: hsl(199 89% 48%);
+    --chart-4: hsl(262 83% 58%);
+    --chart-5: hsl(270 95% 75%);
+
+    /* Border Radius */
+    --radius: 0.5rem;
+
+    /* Sidebar Theme */
+    --sidebar-background: hsl(0 0% 100%);
+    --sidebar-foreground: hsl(224 71.4% 4.1%);
+    --sidebar-primary: hsl(217 91% 60%);
+    --sidebar-primary-foreground: hsl(0 0% 98%);
+    --sidebar-accent: hsl(210 40% 96%);
+    --sidebar-accent-foreground: hsl(217 91% 60%);
+    --sidebar-border: hsl(214.3 31.8% 91.4%);
+    --sidebar-ring: hsl(217 91% 60%);
+    --sidebar: hsl(0 0% 100%);
+}
+
+.dark {
+    /* Base Colors - Dark Mode */
+    --background: hsl(224 71.4% 4.1%);
+    --foreground: hsl(210 40% 98%);
+    --card: hsl(224 71.4% 4.1%);
+    --card-foreground: hsl(210 40% 98%);
+    --popover: hsl(224 71.4% 4.1%);
+    --popover-foreground: hsl(210 40% 98%);
+
+    /* Primary Theme - Bright Blue for Dark Mode */
+    --primary: hsl(217 91% 65%);
+    --primary-foreground: hsl(224 71.4% 4.1%);
+    --primary-hover: hsl(217 91% 70%);
+    --primary-active: hsl(217 91% 75%);
+    --primary-light: hsl(217 91% 15%);
+    --primary-muted: hsl(217 91% 20%);
+
+    /* Secondary Theme - Bright Green for Dark Mode */
+    --secondary: hsl(142 76% 45%);
+    --secondary-foreground: hsl(224 71.4% 4.1%);
+    --secondary-hover: hsl(142 76% 50%);
+    --secondary-active: hsl(142 76% 55%);
+    --secondary-light: hsl(142 76% 15%);
+    --secondary-muted: hsl(142 76% 20%);
+
+    /* Accent - Dark Blue */
+    --accent: hsl(215 27.9% 16.9%);
+    --accent-foreground: hsl(217 91% 65%);
+    --accent-hover: hsl(215 27.9% 20%);
+
+    /* Neutral Colors - Dark Mode */
+    --muted: hsl(215 27.9% 16.9%);
+    --muted-foreground: hsl(217.9 10.6% 64.9%);
+    --destructive: hsl(0 62.8% 70.6%);
+    --destructive-foreground: hsl(224 71.4% 4.1%);
+    --warning: hsl(38 92% 60%);
+    --warning-foreground: hsl(224 71.4% 4.1%);
+    --info: hsl(199 89% 58%);
+    --info-foreground: hsl(224 71.4% 4.1%);
+
+    /* Borders and Inputs - Dark Mode */
+    --border: hsl(215 27.9% 16.9%);
+    --input: hsl(215 27.9% 16.9%);
+    --ring: hsl(217 91% 65%);
+
+    /* Charts - Enhanced for Dark Mode */
+    --chart-1: hsl(217 91% 65%);
+    --chart-2: hsl(142 76% 45%);
+    --chart-3: hsl(199 89% 58%);
+    --chart-4: hsl(262 83% 68%);
+    --chart-5: hsl(270 95% 80%);
+
+    /* Sidebar Theme - Dark Mode */
+    --sidebar-background: hsl(220 13% 7%);
+    --sidebar-foreground: hsl(210 40% 98%);
+    --sidebar-primary: hsl(217 91% 65%);
+    --sidebar-primary-foreground: hsl(224 71.4% 4.1%);
+    --sidebar-accent: hsl(215 27.9% 16.9%);
+    --sidebar-accent-foreground: hsl(217 91% 65%);
+    --sidebar-border: hsl(215 27.9% 16.9%);
+    --sidebar-ring: hsl(217 91% 65%);
+    --sidebar: hsl(220 13% 9%);
+}
+
+@theme inline {
+    --font-sans: Instrument Sans, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --radius-lg: var(--radius);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-sm: calc(var(--radius) - 4px);
+
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary-hover: var(--primary-hover);
+    --color-primary-active: var(--primary-active);
+    --color-primary-light: var(--primary-light);
+    --color-primary-muted: var(--primary-muted);
+
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary-hover: var(--secondary-hover);
+    --color-secondary-active: var(--secondary-active);
+    --color-secondary-light: var(--secondary-light);
+    --color-secondary-muted: var(--secondary-muted);
+
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent-hover: var(--accent-hover);
+
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+
+    --color-warning: var(--warning);
+    --color-warning-foreground: var(--warning-foreground);
+
+    --color-info: var(--info);
+    --color-info-foreground: var(--info-foreground);
+
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+
+    --color-sidebar: var(--sidebar-background);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+}
+
+@layer utilities {
+    body,
+    html {
+        --font-sans:
+            'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+/* Theme Utility Classes */
+@layer utilities {
+    /* Primary Theme Utilities */
+    .bg-primary-hover {
+        background-color: var(--primary-hover);
+    }
+    .bg-primary-active {
+        background-color: var(--primary-active);
+    }
+    .bg-primary-light {
+        background-color: var(--primary-light);
+    }
+    .bg-primary-muted {
+        background-color: var(--primary-muted);
+    }
+
+    .text-primary-hover {
+        color: var(--primary-hover);
+    }
+    .text-primary-active {
+        color: var(--primary-active);
+    }
+
+    .border-primary-hover {
+        border-color: var(--primary-hover);
+    }
+    .border-primary-active {
+        border-color: var(--primary-active);
+    }
+    .border-primary-light {
+        border-color: var(--primary-light);
+    }
+
+    /* Secondary Theme Utilities */
+    .bg-secondary-hover {
+        background-color: var(--secondary-hover);
+    }
+    .bg-secondary-active {
+        background-color: var(--secondary-active);
+    }
+    .bg-secondary-light {
+        background-color: var(--secondary-light);
+    }
+    .bg-secondary-muted {
+        background-color: var(--secondary-muted);
+    }
+
+    .text-secondary-hover {
+        color: var(--secondary-hover);
+    }
+    .text-secondary-active {
+        color: var(--secondary-active);
+    }
+
+    .border-secondary-hover {
+        border-color: var(--secondary-hover);
+    }
+    .border-secondary-active {
+        border-color: var(--secondary-active);
+    }
+    .border-secondary-light {
+        border-color: var(--secondary-light);
+    }
+
+    /* Accent Theme Utilities */
+    .bg-accent-hover {
+        background-color: var(--accent-hover);
+    }
+    .text-accent-hover {
+        color: var(--accent-hover);
+    }
+    .border-accent-hover {
+        border-color: var(--accent-hover);
+    }
+
+    /* Status Colors */
+    .bg-warning {
+        background-color: var(--warning);
+    }
+    .text-warning {
+        color: var(--warning);
+    }
+    .border-warning {
+        border-color: var(--warning);
+    }
+    .bg-warning-foreground {
+        background-color: var(--warning-foreground);
+    }
+    .text-warning-foreground {
+        color: var(--warning-foreground);
+    }
+
+    .bg-info {
+        background-color: var(--info);
+    }
+    .text-info {
+        color: var(--info);
+    }
+    .border-info {
+        border-color: var(--info);
+    }
+    .bg-info-foreground {
+        background-color: var(--info-foreground);
+    }
+    .text-info-foreground {
+        color: var(--info-foreground);
+    }
+}
