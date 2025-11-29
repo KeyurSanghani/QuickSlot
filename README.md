@@ -15,7 +15,6 @@ A comprehensive appointment scheduling system built with Laravel 12 and Vue 3 (I
 - 👥 **Manage Bookings**: View, confirm, complete, or cancel appointments
 - 💼 **Manage Services**: Create, edit, and manage service offerings
 - 🕐 **Manage Working Hours**: Configure availability schedule by day
-- 📊 Dashboard with comprehensive overview
 - 🔐 Role-based access control with granular permissions
 
 ## Tech Stack
@@ -118,7 +117,7 @@ A comprehensive appointment scheduling system built with Laravel 12 and Vue 3 (I
 
 ## Default Admin Credentials
 
-Default admin user created by seeder and their credentials will be stored in env file:
+Default admin user created by seeder and their default values need to enter in the `.env` file before running the seeder.
 
 > ⚠️ **Important:** Change these credentials    after first login in production!
 
@@ -266,15 +265,6 @@ MAIL_FROM_NAME="${APP_NAME}"
 # Queue Configuration
 QUEUE_CONNECTION=database
 ```
-
-## License
-
-This project is proprietary and confidential.
-
-## Support
-
-For issues or questions, please contact the development team.
-
 ---
 
 **Built with ❤️ using Laravel and Vue.js**
