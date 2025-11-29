@@ -46,7 +46,7 @@ A comprehensive appointment scheduling system built with Laravel 12 and Vue 3 (I
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd quick-slot
+   cd QuickSlot
    ```
 
 2. **Install PHP dependencies**
